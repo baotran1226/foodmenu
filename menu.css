@@ -1,0 +1,1744 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: "Quicksand", sans-serif;
+
+    min-height: 100vh;
+
+    color: #315b68;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            #e0f6f2,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            #d9eafa,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #c9e8ef,
+            #d8edf1
+        );
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.menu-page {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px 25px 100px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.menu-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.logo {
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #315b68;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-decoration: none;
+}
+
+
+.logo span {
+    color: #6da8b6;
+}
+
+
+.menu-header h1 {
+    color: #285e6e;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            52px
+        );
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.menu-header p {
+    margin-top: 12px;
+
+    color: #5f8792;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+
+.search-box {
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.65
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            65,
+            115,
+            130,
+            0.12
+        );
+
+    backdrop-filter: blur(10px);
+}
+
+
+.search-icon {
+    margin-right: 10px;
+
+    font-size: 19px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #315b68;
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 16px;
+}
+
+
+.search-box input::placeholder {
+    color: #8aaab2;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.categories {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+
+.category {
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    color: #477985;
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.category:hover {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.9
+        );
+
+    transform:
+        translateY(-2px);
+}
+
+
+.category.active {
+    background: #5f9eac;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 15px
+        rgba(
+            63,
+            111,
+            130,
+            0.2
+        );
+}
+
+
+/* =========================
+   FOOD GRID
+========================= */
+
+.food-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 25px;
+}
+
+
+/* =========================
+   FOOD CARD
+========================= */
+
+.food-card {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 22px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
+
+    color: inherit;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            63,
+            111,
+            130,
+            0.12
+        );
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.food-card:hover {
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(
+            63,
+            111,
+            130,
+            0.2
+        );
+}
+
+
+/* =========================
+   FOOD INFO
+========================= */
+
+.food-info {
+    padding: 22px;
+}
+
+
+/* =========================
+   FOOD TAG
+========================= */
+
+.food-tag {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(
+            95,
+            158,
+            172,
+            0.14
+        );
+
+    color: #477985;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   FOOD NAME
+========================= */
+
+.food-info h2 {
+    color: #315b68;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    margin-top: 8px;
+
+    color: #7899a2;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   RESTAURANT
+========================= */
+
+.food-bottom {
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.restaurant {
+    color: #71949d;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+a.restaurant:hover {
+    color: #477985;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   NO RESULT
+========================= */
+
+.no-result {
+    display: none;
+
+    padding: 40px 10px;
+
+    text-align: center;
+
+    color: #6d929c;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   3 NÚT CHỨC NĂNG GÓC PHẢI
+===================================================== */
+
+.action-buttons {
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    z-index: 5000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   ACTION BUTTON
+========================= */
+
+.action-button {
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            63,
+            111,
+            130,
+            0.2
+        );
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        width 0.2s ease;
+}
+
+
+.action-button:hover {
+    transform:
+        translateX(-5px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            63,
+            111,
+            130,
+            0.25
+        );
+}
+
+
+.action-button:active {
+    transform:
+        scale(0.94);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.action-icon {
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.action-label {
+    display: none;
+
+    margin-left: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   MÀU TỪNG NÚT
+========================= */
+
+.add-action {
+    background: #5f9eac;
+
+    color: #ffffff;
+}
+
+
+.edit-action {
+    background: #ffffff;
+
+    color: #477985;
+}
+
+
+.delete-action {
+    background: #ffffff;
+
+    color: #c86666;
+}
+
+
+/* =====================================================
+   POPUP CHỌN MÓN
+===================================================== */
+
+.food-selector-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(
+            49,
+            91,
+            104,
+            0.25
+        );
+
+    backdrop-filter: blur(8px);
+
+    animation:
+        overlayFadeIn
+        0.2s ease;
+}
+
+
+@keyframes overlayFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   BOX
+========================= */
+
+.food-selector {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    padding: 28px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.96
+        );
+
+    box-shadow:
+        0 25px 70px
+        rgba(
+            49,
+            91,
+            104,
+            0.25
+        );
+
+    animation:
+        selectorPop
+        0.25s ease;
+}
+
+
+@keyframes selectorPop {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.9)
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+}
+
+
+/* =========================
+   TIÊU ĐỀ POPUP
+========================= */
+
+.food-selector h2 {
+    text-align: center;
+
+    color: #315b68;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+.food-selector > p {
+    margin-top: 7px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    color: #7899a2;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   DANH SÁCH MÓN TRONG POPUP
+===================================================== */
+
+.food-selector-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    max-height: 45vh;
+
+    overflow-y: auto;
+
+    padding-right: 3px;
+}
+
+
+/* =========================
+   ITEM
+========================= */
+
+.food-selector-item {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 14px 16px;
+
+    border: 1px solid
+        rgba(
+            95,
+            158,
+            172,
+            0.12
+        );
+
+    border-radius: 16px;
+
+    background:
+        rgba(
+            229,
+            242,
+            245,
+            0.55
+        );
+
+    color: #315b68;
+
+    text-align: left;
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.food-selector-item:hover {
+    background:
+        rgba(
+            213,
+            234,
+            238,
+            0.9
+        );
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================
+   THÔNG TIN MÓN
+========================= */
+
+.selector-food-info {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    gap: 3px;
+}
+
+
+.selector-food-category {
+    width: fit-content;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(
+            95,
+            158,
+            172,
+            0.13
+        );
+
+    color: #477985;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.selector-food-info strong {
+    overflow: hidden;
+
+    color: #315b68;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.selector-food-info small {
+    overflow: hidden;
+
+    color: #7899a2;
+
+    font-size: 12px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.selector-arrow {
+    flex-shrink: 0;
+
+    color: #6da8b6;
+
+    font-size: 30px;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   NÚT ĐÓNG
+========================= */
+
+.selector-close {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background:
+        #edf5f6;
+
+    color: #477985;
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.selector-close:hover {
+    background:
+        #dcecef;
+}
+
+
+/* =====================================================
+   XÁC NHẬN XÓA
+===================================================== */
+
+.delete-confirm {
+    position: absolute;
+
+    inset: 20px;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.98
+        );
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            63,
+            111,
+            130,
+            0.18
+        );
+
+    text-align: center;
+}
+
+
+.delete-confirm-icon {
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: #fdeaea;
+
+    font-size: 27px;
+}
+
+
+.delete-confirm h3 {
+    color: #315b68;
+
+    font-size: 20px;
+}
+
+
+.delete-confirm p {
+    margin-top: 8px;
+
+    color: #7899a2;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.delete-confirm p strong {
+    color: #c86666;
+}
+
+
+/* =========================
+   NÚT HỦY / XÓA
+========================= */
+
+.delete-confirm-buttons {
+    width: 100%;
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.delete-confirm-buttons button {
+    flex: 1;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.cancel-delete {
+    background: #edf5f6;
+
+    color: #477985;
+}
+
+
+.confirm-delete {
+    background: #c86666;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   THÔNG BÁO XÓA
+===================================================== */
+
+.delete-success-message {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 35px;
+
+    z-index: 20000;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 20px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.96
+        );
+
+    color: #315b68;
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            63,
+            111,
+            130,
+            0.2
+        );
+
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        translateY(20px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.delete-success-message.show {
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+.delete-success-icon {
+    width: 25px;
+
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e4f7ed;
+
+    color: #35a66f;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.delete-success-message span {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   POPUP KHÔNG CÓ MÓN
+===================================================== */
+
+.empty-food-message {
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    z-index: 20000;
+
+    width:
+        calc(
+            100% - 40px
+        );
+
+    max-width: 380px;
+
+    padding: 30px 25px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.96
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            63,
+            111,
+            130,
+            0.22
+        );
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.9);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.empty-food-message.show {
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+
+.empty-food-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.empty-food-message h3 {
+    color: #315b68;
+
+    font-size: 21px;
+}
+
+
+.empty-food-message p {
+    margin-top: 7px;
+
+    color: #7899a2;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.empty-food-message button {
+    margin-top: 18px;
+
+    padding: 11px 22px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #5f9eac;
+
+    color: #ffffff;
+
+    font-family:
+        "Quicksand",
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   POPUP THÀNH CÔNG
+===================================================== */
+
+.success-message {
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    z-index: 30000;
+
+    width:
+        calc(
+            100% - 40px
+        );
+
+    max-width: 380px;
+
+    padding: 32px 25px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.96
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            63,
+            111,
+            130,
+            0.25
+        );
+
+    text-align: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.85);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    backdrop-filter:
+        blur(15px);
+}
+
+
+.success-message.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+
+.success-icon {
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: #e4f7ed;
+
+    color: #35a66f;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    animation:
+        successPop
+        0.4s ease;
+}
+
+
+@keyframes successPop {
+
+    0% {
+        transform:
+            scale(0);
+    }
+
+    70% {
+        transform:
+            scale(1.12);
+    }
+
+    100% {
+        transform:
+            scale(1);
+    }
+}
+
+
+.success-message h2 {
+    margin: 0;
+
+    color: #315b68;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+.success-message p {
+    margin-top: 8px;
+
+    color: #7899a2;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .food-container {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .menu-page {
+        padding:
+            25px
+            15px
+            100px;
+    }
+
+
+    .menu-header {
+        margin-bottom: 25px;
+    }
+
+
+    .logo {
+        margin-bottom: 20px;
+
+        font-size: 17px;
+    }
+
+
+    .menu-header h1 {
+        font-size: 29px;
+    }
+
+
+    .menu-header p {
+        font-size: 14px;
+    }
+
+
+    /* SEARCH */
+
+    .search-box {
+        height: 52px;
+
+        padding:
+            0 17px;
+    }
+
+
+    .search-box input {
+        font-size: 15px;
+    }
+
+
+    /* CATEGORY */
+
+    .categories {
+        justify-content:
+            flex-start;
+
+        flex-wrap:
+            nowrap;
+
+        overflow-x:
+            auto;
+
+        padding-bottom: 8px;
+
+        scrollbar-width:
+            none;
+    }
+
+
+    .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .category {
+        flex-shrink: 0;
+
+        padding:
+            9px 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* FOOD */
+
+    .food-container {
+        grid-template-columns:
+            1fr;
+
+        gap: 16px;
+    }
+
+
+    .food-card {
+        border-radius: 18px;
+    }
+
+
+    .food-card:hover {
+        transform:
+            translateY(-3px);
+    }
+
+
+    .food-info {
+        padding: 18px;
+    }
+
+
+    .food-info h2 {
+        font-size: 20px;
+    }
+
+
+    .description {
+        font-size: 13px;
+    }
+
+
+    .restaurant {
+        font-size: 11px;
+    }
+
+
+    /* 3 NÚT */
+
+    .action-buttons {
+        right: 15px;
+
+        bottom: 18px;
+
+        gap: 8px;
+    }
+
+
+    .action-button {
+        width: 52px;
+
+        height: 52px;
+
+        border-radius: 16px;
+    }
+
+
+    .action-icon {
+        font-size: 22px;
+    }
+
+
+    /* POPUP */
+
+    .food-selector-overlay {
+        padding: 15px;
+    }
+
+
+    .food-selector {
+        padding: 22px 17px;
+
+        max-height: 85vh;
+
+        border-radius: 22px;
+    }
+
+
+    .food-selector h2 {
+        font-size: 21px;
+    }
+
+
+    .food-selector > p {
+        font-size: 13px;
+    }
+
+
+    .food-selector-item {
+        padding:
+            13px 12px;
+    }
+
+
+    .selector-food-info strong {
+        font-size: 15px;
+    }
+
+
+    .selector-food-info small {
+        font-size: 11px;
+    }
+
+
+    /* XÁC NHẬN XÓA */
+
+    .delete-confirm {
+        inset: 15px;
+
+        padding: 20px;
+    }
+
+
+    /* POPUP THÀNH CÔNG */
+
+    .success-message {
+        width:
+            calc(
+                100% - 30px
+            );
+
+        padding:
+            28px 20px;
+
+        border-radius: 22px;
+    }
+
+
+    .success-icon {
+        width: 62px;
+
+        height: 62px;
+
+        font-size: 34px;
+    }
+
+
+    .success-message h2 {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .menu-page {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .menu-header h1 {
+        font-size: 26px;
+    }
+
+
+    .food-info {
+        padding: 16px;
+    }
+
+
+    .food-info h2 {
+        font-size: 18px;
+    }
+
+
+    .food-bottom {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap: 6px;
+    }
+
+
+    .action-buttons {
+        right: 12px;
+
+        bottom: 15px;
+    }
+
+
+    .action-button {
+        width: 48px;
+
+        height: 48px;
+    }
+
+
+    .action-icon {
+        font-size: 20px;
+    }
+
+}

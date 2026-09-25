@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Thêm món ăn</title>
+
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#5f9eac">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="FOOD MENU">
+<link rel="apple-touch-icon" href="./icon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="add-food.css">
+
+
+</head>
+
+<body>
+
+<main class="add-page">
+
+    <div class="add-form">
+
+        <a
+            href="menu.html"
+            class="back-button"
+        >
+            ← Quay lại menu
+        </a>
+
+        <div class="add-header">
+
+            <h1>
+                Thêm món ăn
+            </h1>
+
+            <p>
+                Thêm món mới vào menu của bạn
+            </p>
+
+        </div>
+
+
+        <form id="foodForm">
+
+            <div class="form-group">
+
+                <label for="foodName">
+                    Tên món
+                </label>
+
+                <input
+                    type="text"
+                    id="foodName"
+                    placeholder="Ví dụ: Phở Gà"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="foodDescription">
+                    Mô tả món ăn
+                </label>
+
+                <textarea
+                    id="foodDescription"
+                    placeholder="Ví dụ: Phở gà thơm ngon với nước dùng đậm đà..."
+                    rows="4"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-row">
+
+
+
+                <div class="form-group">
+
+                    <label for="foodCategory">
+                        Danh mục
+                    </label>
+
+                    <select
+                        id="foodCategory"
+                        required
+                    >
+
+                        <option value="">
+                            Chọn danh mục
+                        </option>
+
+                        <option value="Món nước">
+                            🍜 Món nước
+                        </option>
+
+                        <option value="Cơm">
+                            🍚 Cơm
+                        </option>
+
+                        <option value="Đồ ăn nhanh">
+                            🍕 Đồ ăn nhanh
+                        </option>
+
+                        <option value="Đồ ngọt">
+                            🍰 Đồ ngọt
+                        </option>
+
+                        <option value="Đồ uống">
+                            🥤 Đồ uống
+                        </option>
+
+                        <option value="Lẩu">
+                            🍜 Lẩu
+                        </option>
+
+                        <option value="Món xào">
+                            🍳 Món xào
+                        </option>
+
+                        <option value="Món nướng">
+                            🍖 Món nướng
+                        </option>
+
+                        <option value="Chè">
+                            🍧 Chè
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="restaurantName">
+                    Tên quán
+                </label>
+
+                <input
+                    type="text"
+                    id="restaurantName"
+                    placeholder="Ví dụ: Phở Hương"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="restaurantMap">
+                    Link Google Maps
+                </label>
+
+                <input
+                    type="url"
+                    id="restaurantMap"
+                    placeholder="https://maps.app.goo.gl/..."
+                >
+
+                <small>
+                    Khi khách bấm vào tên quán, Google Maps sẽ được mở.
+                </small>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-food-button"
+            >
+                THÊM MÓN
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+<!-- THÔNG BÁO THÊM MÓN THÀNH CÔNG -->
+
+<div id="successMessage" class="success-message" >
+
+<div class="success-icon">
+    ✓
+</div>
+
+<h2>
+    Thêm món thành công!
+</h2>
+
+<p>
+    Món ăn đã được thêm vào menu.
+</p>
+
+</div>
+
+<script src="menu.js"></script>
+
+<script src="./pwa.js"></script>
+
+</body>
+
+</html>

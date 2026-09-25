@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Menu món ăn</title>
+
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#5f9eac">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="FOOD MENU">
+<link rel="apple-touch-icon" href="./icon-192.png">
+
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<!-- CSS -->
+<link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<main class="menu-page">
+
+    <!-- HEADER -->
+    <header class="menu-header">
+
+        <a href="index.html" class="logo">
+            FOOD<span>MENU</span>
+        </a>
+
+        <h1>
+            HÔM NAY BẠN MUỐN ĂN GÌ?
+        </h1>
+
+        <p>
+            Khám phá những món ăn ngon dành cho bạn
+        </p>
+
+    </header>
+
+
+    <!-- SEARCH -->
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Bạn muốn tìm món gì?"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY -->
+    <section class="categories">
+
+        <button
+            class="category active"
+            data-category="all"
+        >
+            Nổi bật
+        </button>
+
+        <button
+            class="category"
+            data-category="Món nước"
+        >
+            🍜 Món nước
+        </button>
+
+        <button
+            class="category"
+            data-category="Cơm"
+        >
+            🍚 Cơm
+        </button>
+
+        <button
+            class="category"
+            data-category="Đồ ăn nhanh"
+        >
+            🍕 Đồ ăn nhanh
+        </button>
+
+        <button
+            class="category"
+            data-category="Đồ ngọt"
+        >
+            🍰 Đồ ngọt
+        </button>
+
+        <button
+            class="category"
+            data-category="Đồ uống"
+        >
+            🥤 Đồ uống
+        </button>
+
+        <button
+            class="category"
+            data-category="Lẩu"
+        >
+            🍜 Lẩu
+        </button>
+
+        <button
+            class="category"
+            data-category="Món xào"
+        >
+            🍳 Món xào
+        </button>
+
+        <button
+            class="category"
+            data-category="Món nướng"
+        >
+            🍖 Món nướng
+        </button>
+
+        <button
+            class="category"
+            data-category="Chè"
+        >
+            🍧 Chè
+        </button>
+
+    </section>
+
+
+    <!-- DANH SÁCH MÓN -->
+    <section
+        class="food-container"
+        id="foodContainer"
+    >
+
+        
+
+   
+
+    </section>
+
+
+    <!-- KHÔNG TÌM THẤY -->
+    <p
+        id="noResult"
+        class="no-result"
+    >
+        Không tìm thấy món ăn phù hợp.
+    </p>
+
+    
+
+</main>
+
+    <button type="button" id="addFoodButton" class="add-food-button" aria-label="Thêm món ăn"  onclick="window.location.href='add-food.html'"> + </button>
+
+<!-- JAVASCRIPT -->
+<script src="menu.js"></script>
+
+
+<script src="./pwa.js"></script>
+
+</body>
+</html>

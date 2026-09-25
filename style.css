@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Quicksand", sans-serif;
+}
+/* =========================
+   HERO
+========================= */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            #dff6f2 0%,
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            #c7e7f4 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #bfe8ee,
+            #b9dff1,
+            #d5edf0
+        );
+}
+/* =========================
+   NỘI DUNG
+========================= */
+.content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1000px;
+}
+/* Dòng nhỏ */
+.small-text {
+    margin-bottom: 18px;
+    color: #5C8792;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-shadow:
+        1px 2px 4px rgba(63, 111, 130, 0.35);
+}
+/* Tiêu đề */
+h1 {
+    color: #285E6E;
+    font-size: clamp(38px, 7vw, 82px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 2px;
+    text-shadow:
+        2px 3px 7px rgba(63, 111, 130, 0.5);
+}
+/* Tiếng Anh */
+p {
+    margin-top: 22px;
+    color: #3F6F7D;
+    font-size: clamp(15px, 2.5vw, 26px);
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-shadow:
+        2px 2px 5px rgba(63, 111, 130, 0.4);
+}
+/* =========================
+   PASTEL BLOBS
+========================= */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.65;
+    animation: floating 7s ease-in-out infinite;
+}
+/* Blob 1 */
+.blob-1 {
+    width: 260px;
+    height: 260px;
+    background: #c9f1e9;
+    top: -80px;
+    left: -70px;
+}
+/* Blob 2 */
+.blob-2 {
+    width: 220px;
+    height: 220px;
+    background: #d9c9f4;
+    right: -70px;
+    top: 12%;
+    animation-delay: 1s;
+}
+/* Blob 3 */
+.blob-3 {
+    width: 300px;
+    height: 300px;
+    background: #b9e5f4;
+    bottom: -120px;
+    left: 10%;
+    animation-delay: 2s;
+}
+/* Blob 4 */
+.blob-4 {
+    width: 180px;
+    height: 180px;
+    background: #f5d5e6;
+    bottom: 5%;
+    right: 5%;
+    animation-delay: 3s;
+}
+/* =========================
+   FOOD ICON
+========================= */
+.food-icon {
+    position: absolute;
+    z-index: 5;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    font-size: 34px;
+    box-shadow:
+        0 8px 25px rgba(69, 125, 145, 0.15);
+    animation: floating 5s ease-in-out infinite;
+}
+/* Vị trí icon */
+.icon-1 {
+    top: 14%;
+    left: 12%;
+}
+.icon-2 {
+    top: 25%;
+    right: 12%;
+    animation-delay: 1s;
+}
+.icon-3 {
+    bottom: 18%;
+    left: 15%;
+    animation-delay: 2s;
+}
+.icon-4 {
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 3s;
+}
+.icon-5 {
+    top: 8%;
+    right: 32%;
+    width: 55px;
+    height: 55px;
+    font-size: 27px;
+    animation-delay: 1.5s;
+}
+.icon-6 {
+    bottom: 10%;
+    left: 40%;
+    width: 55px;
+    height: 55px;
+    font-size: 27px;
+    animation-delay: 2.5s;
+}
+/* =========================
+   FLOATING ANIMATION
+========================= */
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+    .hero {
+        padding: 25px;
+    }
+    .small-text {
+        font-size: 12px;
+        letter-spacing: 4px;
+        margin-bottom: 15px;
+    }
+    h1 {
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+        margin-top: 16px;
+    }
+    .food-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 25px;
+    }
+    .icon-1 {
+        top: 10%;
+        left: 7%;
+    }
+    .icon-2 {
+        top: 18%;
+        right: 6%;
+    }
+    .icon-3 {
+        bottom: 15%;
+        left: 7%;
+    }
+    .icon-4 {
+        bottom: 12%;
+        right: 7%;
+    }
+    .icon-5 {
+        top: 7%;
+        right: 35%;
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+    }
+    .icon-6 {
+        bottom: 8%;
+        left: 42%;
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+    }
+    .blob-1 {
+        width: 180px;
+        height: 180px;
+    }
+    .blob-2 {
+        width: 160px;
+        height: 160px;
+    }
+    .blob-3 {
+        width: 200px;
+        height: 200px;
+    }
+    .blob-4 {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* =========================
+   NÚT KHÁM PHÁ MÓN ĂN
+========================= */
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 35px;
+    padding: 15px 28px;
+    border-radius: 50px;
+    background: #5f9eac;
+    color: #ffffff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    box-shadow:
+        0 8px 20px rgba(63, 111, 130, 0.25);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+/* Mũi tên */
+.explore-btn span {
+    font-size: 22px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+/* Khi rê chuột */
+.explore-btn:hover {
+    background: #4f8e9d;
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 25px rgba(63, 111, 130, 0.3);
+}
+.explore-btn:hover span {
+    transform: translateX(5px);
+}
+/* Khi bấm */
+.explore-btn:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow:
+        0 4px 10px rgba(63, 111, 130, 0.2);
+}
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+    .explore-btn {
+        margin-top: 30px;
+        padding: 14px 23px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .explore-btn span {
+        font-size: 20px;
+    }
+}
